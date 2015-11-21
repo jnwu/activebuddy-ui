@@ -9,7 +9,11 @@ angular.module('myApp.register', ['ngRoute'])
   });
 }])
 
-.controller('RegisterCtrl', [function() {
-	
+.controller('RegisterCtrl', ['$scope', function($scope) {
+	$scope.user = {email: '', first: '', last: '', interests: '', password: ''};
+	$scope.showprofile=false;
+	$scope.validate=function(){
+		$scope.showprofile=true;
+	};
 
 }]);
