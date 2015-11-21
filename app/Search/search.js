@@ -9,6 +9,12 @@ angular.module('myApp.search', ['ngRoute'])
   });
 }])
 
-.controller('Search2Ctrl', [function() {
+.controller('Search2Ctrl', ['$scope', '$filter', function($scope, $filter) {
+
+  $scope.activities = "xyz";
+
+  /* $scope.runsearch = function(){
+    console.log("Connected")
+  }; */
 
 }]);
