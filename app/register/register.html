@@ -1,3 +1,4 @@
+<div ng-controller="RegisterCtrl as regctrl">
 <h1>Register</h1>
 <div>
 <form id="register">
@@ -15,8 +16,31 @@
 		&nbsp;
 	</div>
 	<div>
-	<input type="button" value="Register" />
+	<input type="button" class="btn btn-default" ng-click="regctrl.validate()" type="button" value="Register" />
 	</div>
 </div>
 </form>
+</div>
+<div id="profile">
+<h1>Profile</h1>
+<div class="row">
+	<div>
+		Name
+	</div>
+	<div>
+	<input type="text" name="first" /> &nbsp;<input type="text" name="last" />
+	</div>
+
+</div>
+<div class="row">
+	<div>
+		Password
+	</div>
+	<div>
+	<input type="password" name="password" id="password" />
+	</div>
+
+</div>
+
+</div>
 </div>
