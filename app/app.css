@@ -175,9 +175,15 @@ background:#fff;
   margin-top:50px;
 }
 /*
-Desktop only styles 800px +
+Desktop only styles 800px - 1400
 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-device-width: 769px) and (max-device-width: 1399px) {
+  body{
+        padding-top:0;
+        background: url("./img/1366X768HOMEPAGE.jpg") no-repeat;
+      }
+}
+@media screen and (min-width: 1400px) {
   body{
         padding-top:0;
         background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;

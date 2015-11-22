@@ -19,7 +19,7 @@ getActivities();
 
 function getActivities() {
 
-  return $http.get('http://activebuddy-db-staging.herokuapp.com/activity'
+  return $http.get('http://activebuddy-db-production.herokuapp.com/activity'
   ).success(function(data) {
       // this callback will be called asynchronously
       // when the response is available
