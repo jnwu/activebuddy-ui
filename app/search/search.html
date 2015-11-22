@@ -1,0 +1,35 @@
+<div ng-controller="Search2Ctrl">
+
+      <div class="col-sm-9 bootcards-list" id="list" data-title="Contacts">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="search-form">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" ng-model="q" placeholder="filter activities...">
+                    <i class="fa fa-search"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div><!--panel body-->
+
+          <div class="list-group">
+
+            <a class="list-group-item itemfit" ng-repeat="activity in activities | filter:q as results">
+              <span>
+                 <img src="img/sbenson.jpg" class="img-rounded img pull-left">
+              </span>
+              <h4 class="list-group-item-heading">[{{$index + 1}}] {{activity.activity}}</h4>
+              <p class="list-group-item-text">  @{{activity.location}} by {{activity.ofUserEmail}}</p>
+            </a>
+
+
+          </div><!--list-group-->
+
+        </div><!--panel-->
+
+        </div><!--list-->
+    </div>
