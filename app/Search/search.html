@@ -1,26 +1,50 @@
-<p>Search Results</p>
-  <div ng-init="activities = [
-    {name:'John', age:25, gender:'boy', activity:'hiking'},
-    {name:'Jessie', age:30, gender:'girl', activity:'hiking'},
-    {name:'Johanna', age:28, gender:'girl', activity:'hiking'},
-    {name:'Joy', age:15, gender:'girl', activity:'hiking'},
-    {name:'Mary', age:28, gender:'girl', activity:'running'},
-    {name:'Peter', age:95, gender:'boy', activity:'running'},
-    {name:'Sebastian', age:50, gender:'boy', activity:'running'},
-    {name:'Erika', age:27, gender:'girl', activity:'walking'},
-    {name:'Patrick', age:40, gender:'boy', activity:'walking'},
-    {name:'Samantha', age:60, gender:'girl', activity:'walking'}
-  ]">
 
-  There are {{activities.length}} activities to join.
-  <input type="search" ng-model="q" placeholder="filter activities..." aria-label="filter activities" />
 
-  <ul class="example-animate-container">
-      <li class="animate-repeat" ng-repeat="activity in activities | filter:q as results">
-        [{{$index + 1}}] {{activity.name}} who is {{activity.age}} years old and is planning on {{activity.activity}}.
-      </li>
-      <li class="animate-repeat" ng-if="results.length == 0">
-        <strong>No results found...</strong>
-      </li>
-    </ul>
-  </div>
+
+    <!-- This is where you come in... -->
+    <!-- I've added some sample data below so you can get a feel for the required markup -->
+
+
+      <!-- left list column -->
+      <div class="col-sm-9 bootcards-list" id="list" data-title="Contacts">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="search-form">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search Contacts...">
+                    <i class="fa fa-search"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div><!--panel body-->
+
+          <div class="list-group">
+
+            <!-- list of sample data -->
+
+            <a class="list-group-item" href="#">
+              <div class="item">
+                <img src="img/sbenson.jpg" class="img-rounded img pull-left">
+              </div>
+              <h4 class="list-group-item-heading">Barish, Joseph</h4>
+              <p class="list-group-item-text">Masung Corp.</p>
+            </a>
+
+            <a class="list-group-item item" href="#">
+              <div class="item">
+                <img src="img/sacey.jpg" class="img-rounded img pull-left"
+              </div>
+              <h4 class="list-group-item-heading">Acey, Sofia</h4>
+              <p class="list-group-item-text">Masung Corp.</p>
+            </a>
+
+
+          </div><!--list-group-->
+
+        </div><!--panel-->
+
+        </div><!--list-->

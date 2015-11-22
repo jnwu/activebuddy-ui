@@ -1,0 +1,18 @@
+
+<h3>  There are {{activities.length}} activities to join.</h3>
+  <input class = "form-control" type="search" ng-model="q" placeholder="filter activities..." aria-label="filter activities" />
+
+  <ul class="example-animate-container">
+    <div class="list-group">
+      <li class="animate-repeat list-group-item" ng-repeat="activity in activities | filter:q as results">
+        <h4 class="list-group-item-heading">[{{$index + 1}}] {{activity.activity}}</h4>
+        <p class="list-group-item-text">
+          {{activity.name}} who is {{activity.age}} years old and is planning on .
+        </p>
+      </li>
+    </div>
+
+      <li class="animate-repeat list-group-item" ng-if="results.length == 0">
+        <strong>No results found...</strong>
+      </li>
+    </ul>
