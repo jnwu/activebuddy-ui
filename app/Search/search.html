@@ -1,11 +1,4 @@
 
-
-
-    <!-- This is where you come in... -->
-    <!-- I've added some sample data below so you can get a feel for the required markup -->
-
-
-      <!-- left list column -->
       <div class="col-sm-9 bootcards-list" id="list" data-title="Contacts">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -13,7 +6,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search Contacts...">
+                    <input type="text" class="form-control" ng-model="q" placeholder="filter activities...">
                     <i class="fa fa-search"></i>
                   </div>
                 </div>
@@ -24,22 +17,12 @@
 
           <div class="list-group">
 
-            <!-- list of sample data -->
-
-            <a class="list-group-item" href="#">
-              <div class="item">
-                <img src="img/sbenson.jpg" class="img-rounded img pull-left">
-              </div>
-              <h4 class="list-group-item-heading">Barish, Joseph</h4>
-              <p class="list-group-item-text">Masung Corp.</p>
-            </a>
-
-            <a class="list-group-item item" href="#">
-              <div class="item">
-                <img src="img/sacey.jpg" class="img-rounded img pull-left"
-              </div>
-              <h4 class="list-group-item-heading">Acey, Sofia</h4>
-              <p class="list-group-item-text">Masung Corp.</p>
+            <a class="list-group-item itemfit" ng-repeat="activity in activities | filter:q as results">
+              <span>
+                 <img src="img/sbenson.jpg" class="img-rounded img pull-left">
+              </span>
+              <h4 class="list-group-item-heading">[{{$index + 1}}] {{activity.activity}}</h4>
+              <p class="list-group-item-text">  organized by {{activity.name}} who is {{activity.age}} years old.</p>
             </a>
 
 

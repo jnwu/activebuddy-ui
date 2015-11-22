@@ -29,21 +29,22 @@
   padding: 0;
 }
 
-
-
-.img {
-    max-width: 100%;
-    height: auto;
+.itemfit .img{
+  float: left;
+  width: 50px;
 }
 
-.item {
-    width: 120px;
-    height: 120px;
-    height: auto;
-    float: left;
-    margin: 3px;
-    padding: 3px;
+.itemfit span{
+  display: inline;
 }
+
+.itemfit {
+  display: block;
+  width: 100%;
+  clear: both;
+  border: 1px solid #eee;
+}
+
 /*
 Custom css
 */
