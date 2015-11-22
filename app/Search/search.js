@@ -24,6 +24,8 @@ angular.module('myApp.search', ['ngRoute'])
     {name:'Samantha', age:60, gender:'girl', activity:'walking'}
   ];
 
+
+
   /* $scope.runsearch = function(){
     console.log("Connected")
   }; */
