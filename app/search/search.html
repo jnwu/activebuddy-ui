@@ -20,7 +20,7 @@
 
             <a class="list-group-item itemfit" ng-repeat="activity in activities | filter:q as results">
               <span>
-                 <img src="img/sbenson.jpg" class="img-rounded img pull-left">
+                 <img src="img/sbenson.jpg" class="img-rounded pull-left">
               </span>
               <h4 class="list-group-item-heading">[{{$index + 1}}] {{activity.activity}}</h4>
               <p class="list-group-item-text">  @{{activity.location}} by {{activity.ofUserEmail}} on {{activity.created | date:'medium'}}</p>

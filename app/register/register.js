@@ -20,7 +20,7 @@ angular.module('myApp.register', ['ngRoute'])
 	1-login
 	*/
 	$scope.loginstatus=0;
-	
+
 	//Users stuff
 	$scope.user = {email: '', password: null};
 	$scope.userprofile = {activity: '', skill: ''};
@@ -34,6 +34,13 @@ angular.module('myApp.register', ['ngRoute'])
 	  { id: 2 },
 	  { id: 3 }
 	];
+
+  $scope.gender=[
+    {id: 1, "text": "Female"},
+    {id: 2, "text": "Male"},
+    {id: 3, "text": "Other"}
+  ];
+
 	$scope.selActivity=$scope.activity[0].subItem;
 	$scope.selSkills=$scope.skills[0].subItem;
 
@@ -65,14 +72,14 @@ angular.module('myApp.register', ['ngRoute'])
 		$http(req).then(function successCallback(response) {
 		    console.log(response);
 		    console.log(response.data.status);
-		    
+
 		    if(response.data.status=="SUCCESS"){
 		    	console.log("Return true");
 		    	$scope.hideregister=true;
 				$scope.showprofile=true;
 
 				//this is critical for switching between logging in or registering.
-				if($scope.loginstatus==0){	
+				if($scope.loginstatus==0){
 					//register tasks
 					$scope.alertUser("You have succesfully registered and are now logged in, please complete your profile.", "success");
 					$scope.debug("Registering");
@@ -83,7 +90,7 @@ angular.module('myApp.register', ['ngRoute'])
 					//$location.path( "/search" );
 				};
 
-				
+
 		    }else{
 		    	return false;
 		    }
@@ -92,13 +99,13 @@ angular.module('myApp.register', ['ngRoute'])
 		    return false;
 
 		 });
-		
+
 	};
 
 	$scope.addActivity=function(query){
 
 	};
-	
+
 	$scope.alertUser=function(msg, alerttype){
 		console.log(msg);
 		$scope.alertmessage=msg;
