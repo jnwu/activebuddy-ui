@@ -149,11 +149,18 @@ Information content styles for sliding below main home page
 background:#738AA6;
 color:#fff;
 }
+#infocontent2 .apinfo div,
+#infocontent3 .apinfo div{
+  margin-top:5px;
+}
 #infocontent2{
-background:#4B688A;
+background:#fff;
 }
 #infocontent3{
-background:#2B4A6F;
+background:#fff;
+}
+#infocontent4{
+background:#fff;
 }
 .apinfo{
   margin: 0 auto;
