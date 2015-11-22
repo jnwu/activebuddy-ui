@@ -60,6 +60,7 @@ angular.module('myApp.register', ['ngRoute'])
 
 	$scope.registerUser=function(){
 		//create request variable for post
+
 		$scope.user.password = btoa($scope.user.password);
 		var req = {
 		 method: 'POST',
