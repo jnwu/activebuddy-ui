@@ -9,9 +9,9 @@ angular.module('myApp.search', ['ngRoute'])
   });
 }])
 
-.controller('Search2Ctrl', ['$scope', '$filter', function($scope, $filter) {
+.controller('Search2Ctrl', ['$scope', '$filter', '$http', '$q', function($scope, $filter, $http, $q) {
 
-  $scope.activities = [
+  $scope.activities2 = [
     {name:'John', age:25, gender:'boy', activity:'hiking'},
     {name:'Jessie', age:30, gender:'girl', activity:'hiking'},
     {name:'Johanna', age:28, gender:'girl', activity:'hiking'},
@@ -25,9 +25,32 @@ angular.module('myApp.search', ['ngRoute'])
   ];
 
 
+getActivities();
 
-  /* $scope.runsearch = function(){
-    console.log("Connected")
-  }; */
+function getActivities() {
+  var def = $q.defer();
 
+  var request = $http({
+    method: 'GET',
+    url: 'http://activebuddy-db-staging.herokuapp.com/activity'
+  }).then(function successCallback(response) {
+      // this callback will be called asynchronously
+      // when the response is available
+      $scope.activities = response.promise;
+      def.resolve(response);
+
+      console.log($scope.activities);
+    }, function errorCallback(response) {
+
+      def.reject("Failed to get activities");
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+    });
+
+    return def.promise.$$state.value;
+    /* $scope.runsearch = function(){
+      console.log("Connected")
+    }; */
+
+  };
 }]);
