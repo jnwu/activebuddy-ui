@@ -49,9 +49,9 @@
 Custom css
 */
 body{
-  padding-top:0;
-  background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
-}
+      padding-top:0;
+      background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
+    }
 #header{
   background: #eee;
   padding: 10px 0 10px 10px;
@@ -142,3 +142,93 @@ background: transparent;
   width:35px;
   float:right;
 }
+/*
+Information content styles for sliding below main home page
+*/
+#infocontent{
+background:#738AA6;
+color:#fff;
+}
+#infocontent2{
+background:#4B688A;
+}
+#infocontent3{
+background:#2B4A6F;
+}
+.apinfo{
+  margin: 0 auto;
+  clear:both;
+}
+
+
+.apinfo div{
+  text-align: center;
+  margin: 0 auto;
+  margin-top:50px;
+}
+/*
+Desktop only styles 800px +
+*/
+@media screen and (min-width: 1024px) {
+  body{
+        padding-top:0;
+        background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
+      }
+}
+/*
+Desktop only styles 800px +
+*/
+@media screen and (min-width: 769px) {
+    /* STYLES HERE */
+    body{
+      padding-top:0;
+      background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
+    }
+    .apinfo h1{
+      font-size: 50px;
+      text-transform: uppercase;
+    }
+    .apinfo p{
+      text-align: center;
+      font-size: 25px;
+    }
+    .apinfo div div.apinfotext{
+      text-align: center;
+      width: 600px;
+      margin-top:50px;
+
+    }
+}
+/*
+MOBILE CSS
+*/
+
+@media screen and (min-device-width: 100px) and (max-device-width: 768px) { 
+    h1{
+      font-size: 15px;
+    }
+    #register h1{
+      font-size: 15px;
+    }
+    body{
+      background: url("./img/mobilebacking.jpg") no-repeat;
+    }
+    #aplogoimage{
+      width:200px;
+    }
+    .apinfo h1{
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+    .apinfo p{
+      text-align: center;
+      font-size: 15px;
+    }
+    .apinfo div div.apinfotext{
+      text-align: center;
+      width: 200px;
+      margin-top:10px;
+      font-size:14px;
+    }
+}
+
