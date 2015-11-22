@@ -128,4 +128,17 @@ background: transparent;
   font-weight:200;
   width:115px;
 }
-
+#homeregister h2#freetojoin{
+  font-size: 18px;
+  text-transform: lowercase;
+  font-weight: 200;
+  margin-right:160px;
+}
+#socialheader{
+  display:block;
+  padding-right:20px;
+}
+#socialheader img{
+  width:35px;
+  float:right;
+}
