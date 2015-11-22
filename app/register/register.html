@@ -43,12 +43,12 @@
 	<div class="">
 		<h4>Tell Us About Yourself</h4>
 	</div>
-	<input type="text" name="firstname" placeholder="FIRST NAME">
+	<input type="text" name="firstname" ng-model = "$scope.firstname" placeholder="FIRST NAME">
 
-	<input type="text" name="lastname" placeholder="LAST NAME">
+	<input type="text" name="lastname" ng-model = "$scope.lastname" placeholder="LAST NAME">
 
 	<input type="date"
-	       ng-model="string"
+	       ng-model="$scope.birthdate"
 	       [name="string"]
 	       [min="string"]
 	       [max="string"]
@@ -58,7 +58,7 @@
 	       [ng-required="string"]
 	       [ng-change="string"]>
 
-	<select class="form-control" ng-options ="" name="gender" value=""></select>
+	<select class="form-control" ng-options ="" name="gender" ng-model="$scope.gender"></select>
 
 
 </div>

@@ -41,6 +41,7 @@ angular.module('myApp.register', ['ngRoute'])
     {id: 3, "text": "Other"}
   ];
 
+  $scope.selGender = $scope.gender[0].subItem;
 	$scope.selActivity=$scope.activity[0].subItem;
 	$scope.selSkills=$scope.skills[0].subItem;
 
