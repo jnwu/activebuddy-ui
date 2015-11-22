@@ -50,7 +50,7 @@ Custom css
 */
 body{
   padding-top:0;
-  background: url("../img/1920X1080HOMEPAGE.jpg") no-repeat;
+  background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
 }
 #header{
   background: #eee;
@@ -108,15 +108,24 @@ text-transform: uppercase;
 font-size: 24px;
 font-weight: 900;
 }
-#homeregister #email.form-control {
+#homeregister #email.form-control,
+#homeregister #password.form-control {
   background: transparent;
   border:1px solid #fff;
   color:#fff;
-  line-height:30px;
-  font-size: 15px;
+  font-size: 20px;
+  height:50px;
+  font-weight:200;
+  width:240px;
 }
-#homeregister #password{
-  background: transparent;
+#homeregister #btnregister.btn-default,
+#homeregister #btnlogin.btn-default{
+background: transparent;
   border:1px solid #fff;
   color:#fff;
+  font-size: 20px;
+  height:50px;
+  font-weight:200;
+  width:115px;
 }
+

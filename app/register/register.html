@@ -1,9 +1,10 @@
 <div ng-controller="RegisterCtrl" id="homeregister">
-<div class="alert alert-success" ng-show="isalert" ng-bind="alertmessage" id="alerting">Nothing</div>
+
 <form id="registerform">
 <!--START REGISTER/LOGIN BLOCK-->
 <div id="register" ng-hide="hideregister">
 <h1><img src="img/logo.png" alt="ActivePal Share your outdoor passion" title="ActivePal Share your outdoor passion" /></h1>
+<div class="alert alert-success" ng-show="isalert" ng-bind="alertmessage" id="alerting">Nothing</div>
 <div class="row" style="width:100%;">
 	<div>
 		
@@ -27,9 +28,9 @@
 		&nbsp;
 	</div>
 	<div>
-	<input type="button" class="btn btn-default" ng-click="validate()" type="button" value="Register" />
+	<input type="button" class="btn btn-default" ng-click="validate()" type="button" value="Register" id="btnregister" />
 
-	<input type="button" class="btn btn-default" ng-click="login()" type="button" value="Login" id="btnlogin" />
+	<input type="button" class="btn btn-default" ng-click="login()" type="button" value="Join Us" id="btnlogin" />
 	</div>
 </div>
 </div>
