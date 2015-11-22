@@ -83,12 +83,13 @@ angular.module('myApp.register', ['ngRoute'])
 		    	angular.element('#infocontent3').css('display', 'none');
 		    	console.log("Return true");
 		    	$scope.hideregister=true;
-				$scope.showprofile=true;
+				//$scope.showprofile=true;
+				$scope.showthanks=true;
 
 				//this is critical for switching between logging in or registering.
 				if($scope.loginstatus==0){
 					//register tasks
-					$scope.alertUser("You have succesfully registered and are now logged in, please complete your profile.", "success");
+					//$scope.alertUser("You have succesfully registered and are now logged in, please complete your profile.", "success");
 					$scope.debug("Registering");
 				}else{
 					//login tasks
