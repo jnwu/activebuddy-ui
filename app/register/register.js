@@ -65,7 +65,7 @@ angular.module('myApp.register', ['ngRoute'])
 	$scope.registerUser=function(){
 		//create request variable for post
     localStorage.setItem("email", $scope.user.email);
-
+    console.log($scope.user.email);
 		$scope.user.password = btoa($scope.user.password);
 		var req = {
 		 method: 'POST',
