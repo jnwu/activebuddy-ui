@@ -62,7 +62,7 @@ angular.module('myApp.register', ['ngRoute'])
 		//create request variable for post
 		var req = {
 		 method: 'POST',
-		 url: 'https://activebuddy-db-staging.herokuapp.com/user',
+		 url: 'https://activebuddy-db-production.herokuapp.com/user',
 		 headers: {
 		   'Content-Type': 'application/json'
 		 },
@@ -77,16 +77,16 @@ angular.module('myApp.register', ['ngRoute'])
 		    if(response.data.status=="SUCCESS"){
 		    	console.log("Return true");
 		    	$scope.hideregister=true;
-				$scope.showprofile=true;
+				//$scope.showprofile=true;
 
 				//this is critical for switching between logging in or registering.
 				if($scope.loginstatus==0){
 					//register tasks
-					$scope.alertUser("You have succesfully registered and are now logged in, please complete your profile.", "success");
+					$scope.alertUser("Thank you for signing up and becoming a part of the ActivePal community!", "success");
 					$scope.debug("Registering");
 				}else{
 					//login tasks
-					$scope.alertUser("You have succesfully logged in.", "success");
+					$scope.alertUser("Thank you for signing up and becoming a part of the ActivePal community!", "success");
 					$scope.debug("Logging in...");
 					//$location.path( "/search" );
 				};
