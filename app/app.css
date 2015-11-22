@@ -66,5 +66,16 @@ Custom css
    color:#fff;
 }
 .row div{
-  width:200px;
+  width:300px;
+  display:block;
+}
+.row div input, .row div select{
+ display:inline;
+ float:left;
+}
+.skills{
+  width:35px;
+}
+#btnlogin{
+  margin-left: 10px;
 }

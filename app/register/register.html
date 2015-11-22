@@ -1,13 +1,23 @@
 <div ng-controller="RegisterCtrl">
+<form id="registerform">
+<!--START REGISTER/LOGIN BLOCK-->
+<div id="register" ng-hide="hideregister">
 <h1>Register</h1>
-<div id="register">
-<form id="register">
 <div class="row">
 	<div>
 		Email
 	</div>
 	<div>
-	<input class="form-control" type="text" ng-model="user.email" name="email"  />
+	<input class="form-control" type="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-model="user.email" required name="email"  />
+	</div>
+
+</div>
+<div class="row">
+	<div>
+		Password
+	</div>
+	<div>
+	<input class="form-control" type="password" ng-model="user.password" required name="password" id="password" />
 	</div>
 
 </div>
@@ -17,30 +27,37 @@
 	</div>
 	<div>
 	<input type="button" class="btn btn-default" ng-click="validate()" type="button" value="Register" />
-	<input type="button" class="btn btn-default" ng-click="login()" type="button" value="Login" />
+
+	<input type="button" class="btn btn-default" ng-click="login()" type="button" value="Login" id="btnlogin" />
 	</div>
 </div>
-</form>
 </div>
+<!--END REGISTER/LOGIN BLOCK-->
+<!--START PROFILE DETAILS REGISTER-->
 <div id="profile" ng-show="showprofile">
 <h1>Profile</h1>
 <div class="row">
 	<div>
-		Email
+		Your Activities and Skills
 	</div>
 	<div>
-	<input type="text" name="pemail" id="pemail" />
+	<select class="form-control" ng-options="item as item.text for item in activity track by item.id" ng-model="selActivity"></select>
+	<select class="form-control skills" ng-options="item as item.id for item in skills track by item.id" ng-model="selSkills"></select>
+	<input type="button" class="btn btn-default" ng-click="addActivity()" type="button" value="+" />
 	</div>
 
 </div>
 <div class="row">
 	<div>
-		Password
+		&nbsp;
 	</div>
 	<div>
-	<input type="password" name="password" id="password" />
+	<input type="button" class="btn btn-default" ng-click="saveProfile()" type="button" value="Save Profile" />
+	
 	</div>
+</div>
+</div>
+<!--END PROFILE DETAILS REGISTER-->
 
-</div>
-</div>
+</form>
 </div>
