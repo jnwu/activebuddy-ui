@@ -49,6 +49,10 @@ angular.module('myApp.register', ['ngRoute'])
 	$scope.hideregister=false;
 	$scope.isalert=false;
 
+	//*temp stuff before release
+	$scope.showthanks=false;
+	//end temp stuff
+
 	$scope.validate=function(){
 		$scope.loginstatus=0;
 		$scope.registerUser();
@@ -61,7 +65,7 @@ angular.module('myApp.register', ['ngRoute'])
 	$scope.registerUser=function(){
 		//create request variable for post
     localStorage.setItem("email", $scope.user.email);
-
+    console.log($scope.user.email);
 		$scope.user.password = btoa($scope.user.password);
 		var req = {
 		 method: 'POST',
@@ -74,8 +78,8 @@ angular.module('myApp.register', ['ngRoute'])
 
 		//actual request
 		$http(req).then(function successCallback(response) {
-		    console.log(response);
-		    console.log(response.data.status);
+		    //console.log(response);
+		    //console.log(response.data.status);
 
 		    if(response.data.status=="SUCCESS"){
 		    	angular.element('#infocontent').css('display', 'none');
@@ -84,16 +88,19 @@ angular.module('myApp.register', ['ngRoute'])
 		    	console.log("Return true");
 		    	$scope.hideregister=true;
 				//$scope.showprofile=true;
+
 				$scope.showthanks=true;
 
 				//this is critical for switching between logging in or registering.
 				if($scope.loginstatus==0){
 					//register tasks
+
 					//$scope.alertUser("You have succesfully registered and are now logged in, please complete your profile.", "success");
+
 					$scope.debug("Registering");
 				}else{
 					//login tasks
-					$scope.alertUser("You have succesfully logged in.", "success");
+					$scope.alertUser("Thank you for signing up and becoming a part of the ActivePal community!", "success");
 					$scope.debug("Logging in...");
 					//$location.path( "/search" );
 				};

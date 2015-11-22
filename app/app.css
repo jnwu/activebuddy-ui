@@ -15,6 +15,10 @@
   content: "]";
 }
 
+input::-webkit-input-placeholder {
+color: #eee !important;
+}
+
 .menu > li {
   display: inline;
 }
@@ -49,6 +53,7 @@
 Custom css
 */
 body{
+      font-size: 1.1em;
       padding-top:0;
       background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
     }
@@ -216,7 +221,7 @@ Desktop only styles 800px +
 MOBILE CSS
 */
 
-@media screen and (min-device-width: 100px) and (max-device-width: 768px) { 
+@media screen and (min-device-width: 100px) and (max-device-width: 768px) {
     h1{
       font-size: 15px;
     }
@@ -244,4 +249,3 @@ MOBILE CSS
       font-size:14px;
     }
 }
-
