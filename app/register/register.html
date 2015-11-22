@@ -47,6 +47,7 @@
 
 	<input type="text" name="lastname" ng-model = "$scope.lastname" placeholder="LAST NAME">
 
+
 	<input type="date"
 	       ng-model="$scope.birthdate"
 	       [name="string"]
@@ -58,7 +59,12 @@
 	       [ng-required="string"]
 	       [ng-change="string"]>
 
-	<select class="form-control" ng-options ="" name="gender" ng-model="$scope.gender"></select>
+	<select class="form-control" name="gender" ng-model="$scope.gender">
+		<option value="Female">Female</option>
+		<option value="Male">Male</option>
+		<option value="Other">Other</option>
+
+	</select>
 
 
 </div>
