@@ -48,6 +48,9 @@
 /*
 Custom css
 */
+body{
+  padding-top:0;
+}
 #header{
   background: #eee;
   padding: 10px 0 10px 10px;
