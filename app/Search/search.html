@@ -1,3 +1,4 @@
+<div ng-controller="Search2Ctrl">
 
       <div class="col-sm-9 bootcards-list" id="list" data-title="Contacts">
         <div class="panel panel-default">
@@ -22,7 +23,7 @@
                  <img src="img/sbenson.jpg" class="img-rounded img pull-left">
               </span>
               <h4 class="list-group-item-heading">[{{$index + 1}}] {{activity.activity}}</h4>
-              <p class="list-group-item-text">  organized by {{activity.name}} who is {{activity.age}} years old.</p>
+              <p class="list-group-item-text">  @{{activity.location}} by {{activity.ofUserEmail}}</p>
             </a>
 
 
@@ -31,3 +32,4 @@
         </div><!--panel-->
 
         </div><!--list-->
+    </div>

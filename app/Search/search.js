@@ -28,26 +28,19 @@ angular.module('myApp.search', ['ngRoute'])
 getActivities();
 
 function getActivities() {
-  var def = $q.defer();
 
-  var request = $http({
-    method: 'GET',
-    url: 'http://activebuddy-db-staging.herokuapp.com/activity'
-  }).then(function successCallback(response) {
+  return $http.get('http://activebuddy-db-staging.herokuapp.com/activity'
+  ).success(function(data) {
       // this callback will be called asynchronously
       // when the response is available
-      $scope.activities = response.promise;
-      def.resolve(response);
+      $scope.activities = data;
+      console.log(data);
 
-      console.log($scope.activities);
     }, function errorCallback(response) {
 
-      def.reject("Failed to get activities");
-      // called asynchronously if an error occurs
+        console.log("Nothing was returned.")// called asynchronously if an error occurs
       // or server returns response with an error status.
     });
-
-    return def.promise.$$state.value;
     /* $scope.runsearch = function(){
       console.log("Connected")
     }; */
