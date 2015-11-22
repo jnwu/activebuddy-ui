@@ -78,6 +78,9 @@ angular.module('myApp.register', ['ngRoute'])
 		    console.log(response.data.status);
 
 		    if(response.data.status=="SUCCESS"){
+		    	angular.element('#infocontent').css('display', 'none');
+		    	angular.element('#infocontent2').css('display', 'none');
+		    	angular.element('#infocontent3').css('display', 'none');
 		    	console.log("Return true");
 		    	$scope.hideregister=true;
 				$scope.showprofile=true;
