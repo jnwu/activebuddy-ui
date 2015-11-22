@@ -80,7 +80,7 @@ angular.module('myApp.register', ['ngRoute'])
 					//login tasks
 					$scope.alertUser("You have succesfully logged in.", "success");
 					$scope.debug("Logging in...");
-					$location.path( "/search" );
+					//$location.path( "/search" );
 				};
 
 				

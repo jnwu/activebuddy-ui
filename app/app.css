@@ -50,6 +50,7 @@ Custom css
 */
 body{
   padding-top:0;
+  background: url("../img/1920X1080HOMEPAGE.jpg") no-repeat;
 }
 #header{
   background: #eee;
@@ -81,4 +82,41 @@ body{
 }
 #btnlogin{
   margin-left: 10px;
+}
+#homeregister{
+  margin: 0 auto;
+}
+#homeregister div {
+text-align: center;
+margin: 0 auto;
+}
+#homeregister div div.row div {
+text-align: center;
+margin: 0 auto;
+}
+#homeregister h1{
+color:#fff;
+font-family:corbel;
+text-transform: uppercase;
+font-size: 60px;
+font-weight: 900;
+}
+#homeregister h2{
+color:#fff;
+font-family:corbel;
+text-transform: uppercase;
+font-size: 24px;
+font-weight: 900;
+}
+#homeregister #email.form-control {
+  background: transparent;
+  border:1px solid #fff;
+  color:#fff;
+  line-height:30px;
+  font-size: 15px;
+}
+#homeregister #password{
+  background: transparent;
+  border:1px solid #fff;
+  color:#fff;
 }
