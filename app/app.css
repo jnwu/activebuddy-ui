@@ -49,6 +49,7 @@
 Custom css
 */
 body{
+      font-size: 1.1em;
       padding-top:0;
       background: url("./img/1920X1080HOMEPAGE.jpg") no-repeat;
     }

@@ -2,13 +2,11 @@
 <h3>Search for and Join Activities</h3>
       <div style="margin-left: 12%; " class="col-sm-9" id="list" data-title="Contacts">
         <div class="panel panel-default">
-          <div class="panel-body">
-              <input type="text" class="form-control" ng-model="q" placeholder="search activities...">
-          </div><!--panel body-->
-
           <div class="list-group" style="margin: 30px;">
+          <div class="row">
+              <input style="margin-bottom: 2em" type="text" class="form-control" ng-model="q" placeholder="Search near by for activities ...">
+          </div>
             <a class="list-group-item itemfit"  ng-click = "add()" ng-repeat="activity in activities | filter:q as results">
-
               <div class="row">
                 <div class="col-sm-6">
                   <span>
