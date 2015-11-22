@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,33 +24,29 @@
   <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
   <script src="bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
 
-
   <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
   <script type="text/javascript" src="bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
 
   <script type="text/javascript" src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+
   <style>
- 
-  @media screen and (min-device-width: 100px) and (max-device-width: 768px) { 
-    #infocontent2 img{
-
+    @media screen and (min-device-width: 100px) and (max-device-width: 768px) { 
+      #infocontent2 img{}
     }
-  }
-
   </style>
 </head>
 <body>
-  <!--<div id="header">
-  <b>Active Buddy</b> - Find a Buddy, Share the Outdoors
-
-  </div>-->
   <div id="socialheader">
-  <a href="https://instagram.com/activepal"><img src="img/instagram.png" alt="activepal" /></a>
-  <a href="https://twitter.com/activepalcanada"><img src="img/twitter.png" alt="@activepalcanada" /></a>
-  <a href="https://facebook.com/activepalcanada"><img src="img/facebook.png" alt="activepalcanada" /></a>
-  
+    <a href="https://instagram.com/activepal">
+      <img src="img/instagram.png" alt="activepal" />
+    </a>
+    <a href="https://twitter.com/activepalcanada">
+      <img src="img/twitter.png" alt="@activepalcanada" />
+    </a>
+    <a href="https://facebook.com/activepalcanada">
+      <img src="img/facebook.png" alt="activepalcanada" />
+    </a>  
   </div>
-
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -57,58 +54,42 @@
 
   <div id="fullpage">
     <div class="section">
-    <div ng-view class="container-fluid" id="appcontent"></div>
-    </div>
-    
-      <div class="container-fluid section apinfo" id="infocontent" ng-hide="hideregister">
-        
-        <div>
+      <div ng-view class="container-fluid" id="appcontent"></div>
+    </div>    
+    <div class="container-fluid section apinfo" id="infocontent" ng-hide="hideregister">
+      <div>
         <h1>Free to join</h1>
         <div class="apinfotext">
-        <p>ActivePal connects active people who want to share an outdoor sport
-        for the day! Whether you're looking for people to join your activity or wanting to join someone else's, ActivePal makes it easy for you to connect with like-minded people to share adventures and make new friends!</p>
+          <p>ActivePal connects active people who want to share an outdoor sport
+          for the day! Whether you're looking for people to join your activity or wanting to join someone else's, ActivePal makes it easy for you to connect with like-minded people to share adventures and make new friends!</p>
         </div>
         <h1>How does it work?</h1>
-        </div>
       </div>
-      <div class="container-fluid section apinfo" id="infocontent2" ng-hide="hideregister">
-        
-        <div>
-        
+    </div>
+    <div class="container-fluid section apinfo" id="infocontent2" ng-hide="hideregister">
+      <div>
         <div class="apinfotext">
-        <img src="img/slide2.jpg" />
+          <img src="img/slide2.jpg" />
         </div>
-        
-        </div>
-
-
       </div>
-      <div class="container-fluid section apinfo" id="infocontent3" ng-hide="hideregister">
-        
-        <div>
-        
+    </div>
+    <div class="container-fluid section apinfo" id="infocontent3" ng-hide="hideregister">  
+      <div>
         <div class="apinfotext">
-        <img src="img/slide3.jpg" />
+          <img src="img/slide3.jpg" />
         </div>
-        
-        </div>
-
       </div>
-       <div class="container-fluid section apinfo" id="infocontent4" ng-hide="hideregister">
-        
-        <div>
-        
+    </div>
+    <div class="container-fluid section apinfo" id="infocontent4" ng-hide="hideregister">
+      <div>
         <div class="apinfotext">
-        <img src="img/slide4.jpg" />
-        </div>
-        
+          <img src="img/slide4.jpg" />
         </div>
       </div>
-    
+    </div>
   </div>
 
   <!--<div class="container-fluid" id="footer">Copyright ActivePal &copy; 2015</div>-->
-
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
@@ -121,17 +102,17 @@
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
   <script>
-  $(document).ready(function() {
-    $('#fullpage').fullpage();
-  });
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    $(document).ready(function() {
+      $('#fullpage').fullpage();
+    });
 
-  ga('create', 'UA-70464137-1', 'auto');
-  ga('send', 'pageview');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</script>
+    ga('create', 'UA-70464137-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>
