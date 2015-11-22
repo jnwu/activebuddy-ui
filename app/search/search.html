@@ -1,6 +1,6 @@
 <div ng-controller="Search2Ctrl">
 <h3>Search for and Join Activities</h3>
-      <div class="col-sm-9 bootcards-list" id="list" data-title="Contacts">
+      <div style="margin-left: 12%; " class="col-sm-9 bootcards-list" id="list" data-title="Contacts">
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="search-form">
@@ -18,12 +18,29 @@
 
           <div class="list-group">
 
-            <a class="list-group-item itemfit" ng-repeat="activity in activities | filter:q as results">
-              <span>
-                 <img src="img/sbenson.jpg" class="img-rounded pull-left">
-              </span>
-              <h4 class="list-group-item-heading">[{{$index + 1}}] {{activity.activity}}</h4>
-              <p class="list-group-item-text">  @{{activity.location}} by {{activity.ofUserEmail}} on {{activity.created | date:'medium'}}</p>
+
+            <a class="list-group-item itemfit" ng-click = "add()" ng-repeat="activity in activities | filter:q as results">
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <span>
+                     <img src="img/sbenson.jpg" class="img-rounded pull-left">
+                  </span>
+                  <h4 class="list-group-item-heading ">[{{$index + 1}}] {{activity.activity}} </h4>
+                    <p class="list-group-item-text">
+                      @{{activity.location}} by {{activity.ofUserEmail}} on {{activity.created | date:'shortDate'}}
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                  <p class="list-group-item-text" ng-repeat="a in activity.ofUserEmails">
+                    {{a}} is going
+                  </p>
+
+                </div>
+
+              </div>
+
+
             </a>
 
 

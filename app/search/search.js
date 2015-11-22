@@ -11,6 +11,9 @@ angular.module('myApp.search', ['ngRoute'])
 
 .controller('Search2Ctrl', ['$scope', '$filter', '$http', '$q', function($scope, $filter, $http, $q) {
 
+$scope.add = function(){
+  this.activity.ofUserEmails.push(localStorage.email);
+};
 
 getActivities();
 
@@ -21,7 +24,7 @@ function getActivities() {
       // this callback will be called asynchronously
       // when the response is available
       $scope.activities = data;
-      console.log(data);
+      console.log(data[0]);
 
     }, function errorCallback(response) {
 
@@ -33,4 +36,5 @@ function getActivities() {
     }; */
 
   };
+
 }]);
