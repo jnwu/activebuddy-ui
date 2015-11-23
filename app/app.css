@@ -68,6 +68,11 @@ body{
 }
 #appcontent{
   margin:10px;
+  margin: 0 auto;
+}
+#appcontent #apsearch{
+  text-align: center;
+  color:#fff;
 }
 #footer{
    padding:10px;
@@ -178,6 +183,25 @@ background:#fff;
   margin: 0 auto;
   margin-top:50px;
 }
+.activitylocation{
+  color:#2B803E;
+  font-size: 12pt;
+}
+.activityemail{
+  color:#444;
+  font-weight:bold;
+  font-size: 9pt;
+}
+.activitycreated{
+  color:#437983;
+  font-size: 9pt;
+  font-weight: bold;
+}
+.activityon{
+  color:#777;
+  font-size: 9pt;
+  font-weight: bold;
+}
 /*
 Desktop only styles 800px - 1400
 */
@@ -249,3 +273,4 @@ MOBILE CSS
       font-size:14px;
     }
 }
+

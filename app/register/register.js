@@ -11,6 +11,7 @@ angular.module('myApp.register', ['ngRoute'])
 
 .controller('RegisterCtrl', ['$scope', '$location', '$http', function($scope, $location, $http) {
 	//Sessions stuff
+	$('#fullpage').fullpage();
 	//TO DO
 	//Messaging
 	$scope.alertmessage='';
@@ -66,7 +67,7 @@ angular.module('myApp.register', ['ngRoute'])
 		//create request variable for post
     localStorage.setItem("email", $scope.user.email);
     console.log($scope.user.email);
-		$scope.user.password = btoa($scope.user.password);
+		
 		var req = {
 		 method: 'POST',
 		 url: 'https://activebuddy-db-production.herokuapp.com/user',
@@ -82,6 +83,7 @@ angular.module('myApp.register', ['ngRoute'])
 		    //console.log(response.data.status);
 
 		    if(response.data.status=="SUCCESS"){
+		    	$location.path("/search");
 		    	angular.element('#infocontent').css('display', 'none');
 		    	angular.element('#infocontent2').css('display', 'none');
 		    	angular.element('#infocontent3').css('display', 'none');

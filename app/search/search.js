@@ -10,7 +10,11 @@ angular.module('myApp.search', ['ngRoute'])
 }])
 
 .controller('Search2Ctrl', ['$scope', '$filter', '$http', '$q', function($scope, $filter, $http, $q) {
-
+angular.element('#infocontent').css('display', 'none');
+angular.element('#infocontent2').css('display', 'none');
+angular.element('#infocontent3').css('display', 'none');
+angular.element('#infocontent4').css('display', 'none');
+ $.fn.fullpage.destroy('all');
 $scope.add = function(){
   this.activity.ofUserEmails.push(localStorage.email);
 };

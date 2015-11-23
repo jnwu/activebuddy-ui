@@ -1,6 +1,7 @@
-<div ng-controller="Search2Ctrl">
+<div ng-controller="Search2Ctrl" id="apsearch">
+<img id="aplogoimage" class="aplogo" src="img/logo-mobile.png" alt="ActivePal Share your outdoor passion" title="ActivePal Share your outdoor passion" />
 <h3>Search for and Join Activities</h3>
-      <div style="margin-left: 12%; " class="col-sm-9" id="list" data-title="Contacts">
+      <div style="width:100%; " class="col-sm-9" id="list" data-title="Contacts">
         <div class="panel panel-default">
           <div class="list-group" style="margin: 30px;">
           <div class="row">
@@ -14,12 +15,13 @@
                   </span>
                   <h4 class="list-group-item-heading ">[{{$index + 1}}] {{activity.activity}} </h4>
                   <p class="list-group-item-heading">
-                    @{{activity.location}} by {{activity.ofUserEmail}} on {{activity.created | date:'shortDate'}}
+                  <span class="glyphicon glyphicon-map-marker"></span>
+                    <span class="activitylocation">{{activity.location}}</span> <span class="activityon">by</span> <span class="activityemail">{{activity.ofUserEmail}}</span> <span class="activityon">on</span> <span class="activitycreated">{{activity.created | date:'shortDate'}}</span>
                   </p>
                 </div>
                 <div class="col-sm-6">
                   <p class="list-group-item-text" ng-repeat="a in activity.ofUserEmails">
-                    {{a}} is going
+                    <span class="activitycreated">{{a}}</span> <span class="activityon">is going</span>
                   </p>
                 </div>
               </div>
